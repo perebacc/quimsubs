@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reações Orgânicas de Substituição – Química 3º ano</title>
+<style>
+:root{--bg:#fdf5f9;--card:#fff;--ink:#3a1c40;--mut:#7a5e80;--plum:#5b2a63;--rose:#d6457a;--rose-l:#fde4ee;--lil:#a48ad8;--lil-l:#efe8fb;--ok:#2e8b57;--bad:#c0392b;--line:#e8d6ea}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:linear-gradient(135deg,var(--plum),#8a3f86 60%,var(--rose));color:#fff;padding:2.6rem 1.2rem 2.2rem;text-align:center}
+header small{letter-spacing:.14em;text-transform:uppercase;opacity:.85;font-size:.78rem}
+header h1{font:700 clamp(1.7rem,5vw,2.6rem)/1.2 Georgia,serif;margin:.5rem 0 .6rem}
+header p{max-width:640px;margin:0 auto;opacity:.92}
+main{max-width:900px;margin:0 auto;padding:1.4rem 1rem 3rem}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:0 0 .9rem;box-shadow:0 2px 8px rgba(91,42,99,.06)}
+summary{cursor:pointer;list-style:none;padding:1rem 1.2rem;font:700 1.1rem Georgia,serif;color:var(--plum);display:flex;align-items:center;gap:.7rem}
+summary::-webkit-details-marker{display:none}
+summary .n{background:var(--rose);color:#fff;border-radius:50%;width:1.9rem;height:1.9rem;display:grid;place-items:center;font:700 .9rem system-ui;flex:none}
+summary::after{content:"+";margin-left:auto;color:var(--rose);font-size:1.5rem}
+details[open]>summary::after{content:"–"}
+details[open]>summary{border-bottom:1px solid var(--line)}
+.body{padding:1.1rem 1.2rem 1.3rem}
+h3{font:700 1.02rem Georgia,serif;color:var(--rose);margin:1.4rem 0 .5rem}
+h3:first-child{margin-top:0}
+p{margin:.5rem 0}
+.box{background:var(--lil-l);border-left:4px solid var(--lil);border-radius:8px;padding:.7rem 1rem;margin:.9rem 0}
+.box.warn{background:var(--rose-l);border-color:var(--rose)}
+.rx{border:1px solid var(--line);border-radius:12px;padding:.9rem .6rem .7rem;margin:.8rem 0;background:#fffafd}
+.rx .t{font-weight:700;color:var(--plum);text-align:center;font-size:.92rem;margin-bottom:.3rem}
+.rx .c{text-align:center;color:var(--mut);font-size:.85rem;margin-top:.2rem}
+.eq{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.3rem .5rem}
+.m{display:flex;flex-direction:column;align-items:center;text-align:center}
+.m .f{font-size:1.08rem;font-weight:600;color:var(--ink);white-space:nowrap}
+.m .f sub{font-size:.68em}
+.m .nm{font-size:.74rem;color:var(--mut);min-height:1.2em;max-width:150px;line-height:1.25}
+.m svg{width:132px;height:auto;display:block}
+.m svg text{font:600 15px system-ui,sans-serif;fill:var(--ink)}
+.m.op .f{font-size:1.3rem;color:var(--rose)}
+.ar{display:flex;flex-direction:column;align-items:center;min-width:76px;font-size:.78rem;color:var(--plum);font-weight:600}
+.ar i{font-style:normal;min-height:1.1em;white-space:nowrap}
+.ar b{display:block;width:100%;height:2px;background:var(--rose);position:relative;margin:.15rem 0}
+.ar b::after{content:"";position:absolute;right:-1px;top:-4px;border-left:9px solid var(--rose);border-top:5px solid transparent;border-bottom:5px solid transparent}
+table{width:100%;border-collapse:collapse;font-size:.9rem;display:block;overflow-x:auto}
+th,td{padding:.55rem .7rem;border:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--plum);color:#fff;white-space:nowrap}
+tr:nth-child(even) td{background:#fbf3fa}
+ul{padding-left:1.2rem;margin:.4rem 0}
+li{margin:.25rem 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.chip{border-radius:10px;padding:.7rem .9rem;font-size:.92rem}
+.chip.o{background:#e7f6ee;border:1px solid #b9e2cb}.chip.mt{background:#fdeaea;border:1px solid #f1c0bb}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.8rem}
+.fc{perspective:900px;height:150px;cursor:pointer}
+.fc div{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.fc.on div{transform:rotateY(180deg)}
+.fc span{position:absolute;inset:0;backface-visibility:hidden;display:grid;place-items:center;text-align:center;padding:.9rem;border-radius:12px;font-size:.93rem}
+.fc .a{background:linear-gradient(135deg,var(--plum),var(--rose));color:#fff;font-weight:600}
+.fc .b{background:var(--lil-l);border:2px solid var(--lil);transform:rotateY(180deg)}
+.q{border:1px solid var(--line);border-radius:12px;padding:1rem;margin:.8rem 0;background:#fffafd}
+.q p{font-weight:600}
+.q button{display:block;width:100%;text-align:left;margin:.35rem 0;padding:.6rem .8rem;border:1.5px solid var(--line);background:#fff;border-radius:9px;font:inherit;cursor:pointer;color:var(--ink)}
+.q button:hover:not(:disabled){border-color:var(--lil);background:var(--lil-l)}
+.q button.ok{background:#e3f5ea;border-color:var(--ok)}.q button.no{background:#fbe4e1;border-color:var(--bad)}
+.q .ex{display:none;font-size:.9rem;margin-top:.5rem;color:var(--mut)}
+.score{position:sticky;bottom:.6rem;background:var(--plum);color:#fff;padding:.7rem 1rem;border-radius:12px;text-align:center;font-weight:700}
+footer{text-align:center;color:var(--mut);font-size:.82rem;padding:1rem}
+@media(max-width:600px){.two{grid-template-columns:1fr}.m svg{width:112px}.m .f{font-size:1rem}}
+</style>
+</head>
+<body>
+<header>
+<small>Química Orgânica · 3º ano do Ensino Médio</small>
+<h1>Reações Orgânicas de Substituição</h1>
+<p>Halogenação, nitração, sulfonação, alquilação e acilação: como acontecem, com quais condições e o que costuma cair no ENEM e nos vestibulares.</p>
+</header>
+<main>
+
+<details open><summary><span class="n">1</span>Ideia geral e resumo</summary><div class="body">
+<p>Na <b>reação de substituição</b>, um átomo de hidrogênio (ou grupo) do composto orgânico é trocado por outro átomo ou grupo do reagente. O hidrogênio que sai se une ao restante do reagente e forma um segundo produto (HCl, HBr, H₂O…). Lembra a dupla-troca da inorgânica.</p>
+<div class="box"><b>Esquema geral:</b> R–H + X–Y → R–Y + H–X</div>
+<table><tr><th>Reação</th><th>Reagente</th><th>Grupo que entra</th><th>Condições</th><th>Subproduto</th></tr>
+<tr><td>Halogenação</td><td>Cl₂ ou Br₂</td><td>–Cl / –Br</td><td>Alcano: luz ou Δ<br>Aromático: FeCl₃ / FeBr₃</td><td>HCl / HBr</td></tr>
+<tr><td>Nitração</td><td>HNO₃</td><td>–NO₂</td><td>Aromático: H₂SO₄ conc., Δ</td><td>H₂O</td></tr>
+<tr><td>Sulfonação</td><td>H₂SO₄</td><td>–SO₃H</td><td>Δ</td><td>H₂O</td></tr>
+<tr><td>Alquilação (Friedel-Crafts)</td><td>R–Cl</td><td>–R</td><td>AlCl₃ anidro</td><td>HCl</td></tr>
+<tr><td>Acilação (Friedel-Crafts)</td><td>R–COCl</td><td>–COR</td><td>AlCl₃ anidro</td><td>HCl</td></tr></table>
+<div class="box warn"><b>Cuidado:</b> só Cl₂ e Br₂ são usados na prática. O F₂ é violento demais e o I₂ praticamente não reage.</div>
+</div></details>
+
+<details><summary><span class="n">2</span>Substituição em alcanos</summary><div class="body">
+<p>Alcanos são pouco reativos (ligações fortes), então precisam de <b>luz UV</b> ou <b>calor</b>. A halogenação ocorre por radicais livres.</p>
+<h3>Halogenação</h3>
+<div class="rx"><div class="t">Cloração do metano</div><div class="eq" data-eq="CH4~metano ; + ; Cl2 ; >luz ; CH3Cl~clorometano ; + ; HCl~cloreto de hidrogênio"></div><div class="c">Com excesso de Cl₂ pode continuar: CH₂Cl₂ → CHCl₃ (clorofórmio) → CCl₄.</div></div>
+<div class="rx"><div class="t">Cloração do propano: produto principal</div><div class="eq" data-eq="CH3–CH2–CH3~propano ; + ; Cl2 ; >luz ; CH3–CHCl–CH3~2-cloropropano (majoritário) ; + ; HCl"></div></div>
+<div class="rx"><div class="t">Cloração do propano: produto minoritário</div><div class="eq" data-eq="CH3–CH2–CH3~propano ; + ; Cl2 ; >luz ; CH3–CH2–CH2Cl~1-cloropropano (minoritário) ; + ; HCl"></div></div>
+<div class="rx"><div class="t">Bromação do 2-metilpropano</div><div class="eq" data-eq="CH3–CH(CH3)–CH3~2-metilpropano ; + ; Br2 ; >luz ; CH3–CBr(CH3)–CH3~2-bromo-2-metilpropano ; + ; HBr"></div></div>
+<div class="box"><b>Facilidade de substituição:</b> H de carbono <b>terciário</b> &gt; <b>secundário</b> &gt; <b>primário</b>. Por isso o 2-cloropropano (H secundário) predomina. O bromo é ainda mais seletivo que o cloro.</div>
+<h3>Nitração</h3>
+<div class="rx"><div class="t">Nitração do etano</div><div class="eq" data-eq="CH3–CH3~etano ; + ; HNO3 ; >Δ ; CH3–CH2–NO2~nitroetano ; + ; H2O"></div></div>
+<h3>Sulfonação</h3>
+<div class="rx"><div class="t">Sulfonação do etano</div><div class="eq" data-eq="CH3–CH3~etano ; + ; H2SO4 ; >Δ ; CH3–CH2–SO3H~ácido etanossulfônico ; + ; H2O"></div></div>
+</div></details>
+
+<details><summary><span class="n">3</span>Substituição no benzeno</summary><div class="body">
+<p>O anel aromático é estável e prefere <b>substituir</b> (mantém as ligações π deslocalizadas) em vez de adicionar. Esse é um erro clássico: <b>benzeno não faz adição nas reações comuns de prova.</b></p>
+<div class="rx"><div class="t">Halogenação (bromação)</div><div class="eq" data-eq="@~benzeno ; + ; Br2 ; >FeBr3 ; @0:Br~bromobenzeno ; + ; HBr"></div></div>
+<div class="rx"><div class="t">Nitração</div><div class="eq" data-eq="@~benzeno ; + ; HNO3 ; >H2SO4 conc.|Δ ; @0:NO2~nitrobenzeno ; + ; H2O"></div></div>
+<div class="rx"><div class="t">Sulfonação</div><div class="eq" data-eq="@~benzeno ; + ; H2SO4 ; >Δ ; @0:SO3H~ácido benzenossulfônico ; + ; H2O"></div></div>
+<div class="rx"><div class="t">Alquilação de Friedel-Crafts</div><div class="eq" data-eq="@~benzeno ; + ; CH3Cl~clorometano ; >AlCl3 ; @0:CH3~tolueno (metilbenzeno) ; + ; HCl"></div></div>
+<div class="rx"><div class="t">Acilação de Friedel-Crafts</div><div class="eq" data-eq="@~benzeno ; + ; CH3COCl~cloreto de etanoíla ; >AlCl3 ; @0:COCH3~acetofenona (fenil-metil-cetona) ; + ; HCl"></div></div>
+</div></details>
+
+<details><summary><span class="n">4</span>Orientação: o que já está no anel manda</summary><div class="body">
+<p>Quando o anel já tem um grupo, ele decide onde o segundo entra. Posições em relação ao 1º grupo: <b>orto</b> (vizinha, 1,2), <b>meta</b> (1,3) e <b>para</b> (oposta, 1,4).</p>
+<div class="two">
+<div class="chip o"><b>Orto-para dirigentes</b> (ativam o anel)<br>–OH, –NH₂, –CH₃ e demais alquilas, –Cl, –Br, –I<br><small>Têm pares de elétrons ou só ligações simples.</small></div>
+<div class="chip mt"><b>Meta dirigentes</b> (desativam o anel)<br>–NO₂, –SO₃H, –COOH, –CHO, –CN, –COR<br><small>Têm ligações duplas/triplas ou carga positiva no átomo ligado ao anel.</small></div></div>
+<div class="rx"><div class="t">Nitração do tolueno: orto e para</div><div class="eq" data-eq="@0:CH3~tolueno ; + ; HNO3 ; >H2SO4|Δ ; @0:CH3,1:NO2~o-nitrotolueno ; + ; @0:CH3,3:NO2~p-nitrotolueno ; + ; H2O"></div></div>
+<div class="rx"><div class="t">Cloração do nitrobenzeno: meta</div><div class="eq" data-eq="@0:NO2~nitrobenzeno ; + ; Cl2 ; >FeCl3 ; @0:NO2,2:Cl~m-cloronitrobenzeno ; + ; HCl"></div></div>
+<div class="rx"><div class="t">Bromação do fenol (tri-substituição)</div><div class="eq" data-eq="@0:OH~fenol ; + ; 3 Br2 ; >H2O ; @0:OH,1:Br,3:Br,5:Br~2,4,6-tribromofenol ; + ; 3 HBr"></div><div class="c">O grupo –OH ativa tanto o anel que reage com água de bromo, sem catalisador.</div></div>
+<div class="rx"><div class="t">Obtenção do TNT</div><div class="eq" data-eq="@0:CH3~tolueno ; + ; 3 HNO3 ; >H2SO4|Δ ; @0:CH3,1:NO2,3:NO2,5:NO2~2,4,6-trinitrotolueno (TNT) ; + ; 3 H2O"></div></div>
+<h3>Tolueno + Cl₂: depende da condição!</h3>
+<div class="rx"><div class="t">Com luz e calor: substitui na cadeia lateral</div><div class="eq" data-eq="@0:CH3~tolueno ; + ; Cl2 ; >luz|Δ ; @0:CH2Cl~cloreto de benzila ; + ; HCl"></div></div>
+<div class="rx"><div class="t">Com FeCl₃: substitui no anel (orto e para)</div><div class="eq" data-eq="@0:CH3~tolueno ; + ; Cl2 ; >FeCl3 ; @0:CH3,1:Cl~o-clorotolueno ; + ; @0:CH3,3:Cl~p-clorotolueno ; + ; HCl"></div></div>
+<div class="box warn"><b>Macete:</b> luz/calor → cadeia lateral (comporta-se como alcano). Catalisador ácido de Lewis (Fe, Al) → anel aromático.</div>
+</div></details>
+
+<details><summary><span class="n">5</span>Haletos orgânicos: hidrólise alcalina</summary><div class="body">
+<p>O halogênio do haleto é substituído pela hidroxila da base, formando <b>álcool</b> e um sal.</p>
+<div class="rx"><div class="t">Hidrólise do cloroetano</div><div class="eq" data-eq="CH3–CH2–Cl~cloroetano ; + ; NaOH(aq) ; >Δ ; CH3–CH2–OH~etanol ; + ; NaCl"></div></div>
+<div class="rx"><div class="t">Hidrólise do 2-bromopropano</div><div class="eq" data-eq="CH3–CHBr–CH3~2-bromopropano ; + ; KOH(aq) ; >Δ ; CH3–CH(OH)–CH3~propan-2-ol ; + ; KBr"></div></div>
+</div></details>
+
+<details><summary><span class="n">6</span>O que costuma cair na prova</summary><div class="body"><ul>
+<li>Escrever o produto e o <b>subproduto</b> (HCl, HBr ou H₂O) e nomear o composto formado.</li>
+<li>Prever o <b>produto principal</b> na halogenação de alcanos (H terciário &gt; secundário &gt; primário).</li>
+<li>Usar <b>orto-para</b> e <b>meta dirigentes</b> para o 2º substituinte.</li>
+<li>Identificar o catalisador: <b>AlCl₃</b> (Friedel-Crafts), <b>FeBr₃</b> (halogenação do anel), <b>H₂SO₄</b> (nitração).</li>
+<li>Distinguir <b>adição</b> (alcenos/alcinos) de <b>substituição</b> (alcanos e aromáticos).</li>
+<li>Síntese de detergentes: alquilação + sulfonação + neutralização com NaOH (dodecilbenzenossulfonato de sódio).</li></ul>
+<p style="font-size:.82rem;color:var(--mut)">Temas conferidos em Manual do Enem, PrePara Enem, Descomplica, Manual da Química e listas de vestibulares.</p>
+</div></details>
+
+<details><summary><span class="n">7</span>Flashcards (clique para virar)</summary><div class="body"><div class="cards" id="fc"></div></div></details>
+
+<details open><summary><span class="n">8</span>Quiz com correção imediata</summary><div class="body"><div id="quiz"></div><div class="score" id="score">Acertos: 0 / 6</div></div></details>
+</main>
+<footer>Material de estudo · Reações orgânicas de substituição</footer>
+
+<script>
+const SUB="₀₁₂₃₄₅₆₇₈₉";
+const fmt=s=>s.replace(/([A-Za-z\)])(\d+)/g,"$1<sub>$2</sub>");
+const usub=s=>s.replace(/(?<=[A-Za-z\)])\d+/g,d=>[...d].map(x=>SUB[x]).join(""));
+function ring(spec){
+  const cx=95,cy=75,R=28,P=[];
+  for(let k=0;k<6;k++){const a=(-90+60*k)*Math.PI/180;P.push([cx+R*Math.cos(a),cy+R*Math.sin(a),a])}
+  let s='<svg viewBox="0 0 190 150" xmlns="http://www.w3.org/2000/svg"><polygon points="'+P.map(p=>p[0].toFixed(1)+","+p[1].toFixed(1)).join(" ")+'" fill="none" stroke="#5b2a63" stroke-width="2.4" stroke-linejoin="round"/><circle cx="95" cy="75" r="17" fill="none" stroke="#5b2a63" stroke-width="2"/>';
+  if(spec)spec.split(",").forEach(x=>{const [k,l]=x.split(":"),p=P[+k],a=p[2];
+    s+=`<line x1="${p[0]}" y1="${p[1]}" x2="${cx+44*Math.cos(a)}" y2="${cy+44*Math.sin(a)}" stroke="#5b2a63" stroke-width="2.4"/><text x="${cx+58*Math.cos(a)}" y="${cy+58*Math.sin(a)}" text-anchor="middle" dominant-baseline="central">${usub(l)}</text>`});
+  return s+"</svg>";
+}
+document.querySelectorAll(".eq").forEach(e=>{
+  e.innerHTML=e.dataset.eq.split(" ; ").map(t=>{
+    t=t.trim();
+    if(t[0]===">"){const [a,b]=t.slice(1).split("|");return `<div class="m"><div class="ar"><i>${fmt(a||"")}</i><b></b><i>${fmt(b||"")}</i></div><div class="nm">&nbsp;</div></div>`}
+    if(t==="+")return '<div class="m op"><div class="f">+</div><div class="nm">&nbsp;</div></div>';
+    const [m,n=""]=t.split("~");
+    const body=m[0]==="@"?ring(m.slice(1)):`<div class="f">${fmt(m)}</div>`;
+    return `<div class="m">${body}<div class="nm">${n}</div></div>`;
+  }).join("");
+});
+const FC=[["O que é substituição orgânica?","Troca de um H (ou grupo) por outro átomo/grupo do reagente. R–H + X–Y → R–Y + H–X"],
+["Ordem de facilidade de substituição do H em alcanos","Carbono terciário > secundário > primário"],
+["Catalisador da alquilação e da acilação","AlCl₃ anidro (Friedel-Crafts)"],
+["Subproduto da nitração e da sulfonação","Água (H₂O)"],
+["Grupos meta dirigentes","–NO₂, –SO₃H, –COOH, –CHO, –CN, –COR"],
+["Grupos orto-para dirigentes","–OH, –NH₂, –CH₃ (alquilas) e halogênios"],
+["Tolueno + Cl₂ com luz e calor","Substitui na cadeia lateral: cloreto de benzila + HCl"],
+["Hidrólise alcalina de haleto","R–X + NaOH(aq) → R–OH + NaX"]];
+document.getElementById("fc").innerHTML=FC.map(c=>`<div class="fc" onclick="this.classList.toggle('on')"><div><span class="a">${c[0]}</span><span class="b">${c[1]}</span></div></div>`).join("");
+const Q=[
+["Benzeno + Cl₂ na presença de FeCl₃ forma:",["Ciclo-hexano","Clorobenzeno + HCl","1,2,3,4,5,6-hexaclorociclo-hexano","Cloreto de benzila"],1,"É substituição no anel, com catalisador ácido de Lewis. O produto é clorobenzeno e HCl."],
+["Qual grupo é meta dirigente?",["–OH","–CH₃","–NO₂","–NH₂"],2,"O –NO₂ desativa o anel e direciona o novo substituinte para a posição meta."],
+["Produto principal da monocloração do propano com luz:",["1-cloropropano","2-cloropropano","1,1-dicloropropano","Cloreto de propila"],1,"O H secundário é mais fácil de substituir que o primário, então predomina o 2-cloropropano."],
+["Benzeno + CH₃Cl com AlCl₃ é uma:",["Acilação","Nitração","Alquilação de Friedel-Crafts","Sulfonação"],2,"Entrada de grupo alquila no anel: alquilação. O produto é o tolueno."],
+["Tolueno + Cl₂ sob luz e calor forma principalmente:",["o-clorotolueno","p-clorotolueno","m-clorotolueno","Cloreto de benzila"],3,"Luz e calor levam à substituição na cadeia lateral (CH₃ → CH₂Cl)."],
+["Na hidrólise alcalina do cloroetano com NaOH(aq) obtêm-se:",["Eteno e água","Etanol e NaCl","Etano e NaClO","Ácido etanoico"],1,"O Cl é trocado por OH: CH₃CH₂Cl + NaOH → CH₃CH₂OH + NaCl."]];
+let pts=0,done=0;const qz=document.getElementById("quiz");
+Q.forEach((q,i)=>{const d=document.createElement("div");d.className="q";
+  d.innerHTML=`<p>${i+1}. ${q[0]}</p>`+q[1].map((o,j)=>`<button data-j="${j}">${"ABCD"[j]}) ${o}</button>`).join("")+`<div class="ex"></div>`;
+  d.querySelectorAll("button").forEach(b=>b.onclick=()=>{const j=+b.dataset.j;
+    d.querySelectorAll("button").forEach(x=>x.disabled=true);
+    d.querySelectorAll("button")[q[2]].classList.add("ok");
+    if(j===q[2])pts++;else b.classList.add("no");
+    const ex=d.querySelector(".ex");ex.style.display="block";ex.textContent=(j===q[2]?"Correto! ":"Incorreto. ")+q[3];
+    done++;document.getElementById("score").textContent="Acertos: "+pts+" / "+Q.length+(done===Q.length?" · Fim!":"");});
+  qz.appendChild(d)});
+</script>
+</body>
+</html>
